@@ -1,0 +1,77 @@
+задача 2.
+Console.WriteLine("Введите первое число: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите второе число: ");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+if (firstNumber > secondNumber)
+{
+    Console.WriteLine(firstNumber + " > " + secondNumber);
+}
+else if (secondNumber > firstNumber)
+{
+    Console.WriteLine(secondNumber + " > " + firstNumber);
+}
+else
+{
+    Console.WriteLine(secondNumber + " = " + firstNumber);
+}
+
+задача 4.
+Console.WriteLine("Введите первое число: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите второе число: ");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите третье число: ");
+int thirdNumber = Convert.ToInt32(Console.ReadLine());
+
+if (firstNumber > secondNumber)
+{
+    if (firstNumber > thirdNumber)
+    {
+        Console.WriteLine("Максимальное число: " + firstNumber);
+    }
+    else
+    {
+        Console.WriteLine("Максимальное число: " + thirdNumber);
+    }
+}
+
+else if (secondNumber > thirdNumber)
+{
+    Console.WriteLine("Максимальное число: " + secondNumber);
+}
+else
+{
+    Console.WriteLine("Максимальное число: " + thirdNumber);
+}
+
+задача 6.
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+
+if (number % 2 == 0)
+    {
+        Console.WriteLine(number + " - Четное число: ");
+    }
+    else
+    {
+        Console.WriteLine(number + " - Нечетное число");
+    }
+
+задача 8.
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int startNumber = 1;
+
+
+while(startNumber <= number)
+    {
+        if(startNumber % 2 ==0)
+        Console.Write(startNumber + ", ");
+        startNumber ++;
+    }

@@ -2,7 +2,6 @@
 456 -> 5
 782 -> 8
 918 -> 1
-*/
 
 int number = ReadInt("Введите трехзначное число: ");
 int amount = number.ToString().Length;

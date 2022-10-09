@@ -1,21 +1,84 @@
-Задача 29: 
-Напишите программу, которая задаёт массив из N элементов и выводит их на экран.
-5 -> [1, 2, 5, 7, 19]
-3 -> [6, 1, 33]
+ Задача 29: Напишите программу, которая задаёт массив из 8 рандомных элементов и выводит их на экран.
+1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+6, 1, 33 -> [6, 1, 33]
 
 
-int lenArray = ReadInt("Введите длинну массива: ");
+Console.WriteLine($"\nЗадача 29. Ряд чисел преобразует в массив");
+Console.Write("Введите ряд чисел, разделенных запятой : ");
+струна? seriesOfNumbers = Консоль.ReadLine();
 
-int[] randomArray = new int[lenArray];
-for (int i = 0; i < randomArray.Length; i++)
-{
-    randomArray[i] = new Random().Next(1,9);
-    Console.Write(randomArray[i] + " ");
+seriesOfNumbers = seriesOfNumbers + ",";  дополнительня запятая для обозначения конца строки
+
+ функция удаления пробелов из строки 
+string RemoveingSpaces (строковый ряд){
+ строковый рядNew = "";
+ для (int i = 0; i < ряд. Длина; i++)
+  {
+ if (серия[i] != ' ') 
+    {
+ серияNew += серия[i];
+    }
+  }
+ возвращение серииНовое;
 }
 
+ функция проверки на правильность ввода 
+void СheckNumber2 (int  series){
 
-// Функция ввода
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.T
+ if (серия == '0'|| серия == '1'|| серия == '2'
+ || серия == '3'|| серия == '4'|| серия == '5'|| серия == '6'
+ || серия == '7'|| серия == '8'|| серия == '9'|| серия == ','
+ || серия == '-')
+      {
+      }
+        else {
+          Console.WriteLine($"Ошибка ввода  символа. Вводи цифры.");
+
+      }
+}
+
+ функция создания и заполнения массива из строки
+int[] ArrayOfNumbers(string seriesNew){ 
+
+ int[] arrayOfNumbers = новый int[1];  инициализация массива из 1 элемента
+
+  int j =0;
+
+  for (int i = 0; i < seriesNew.Length; i++){
+ строковый рядNew1 = "";
+
+    while (seriesNew[i] != ',' && i < seriesNew.Length){
+ серияNew1 += серияNew[i];
+ СheckNumber2(серияNew[i]);
+      i++;
+    }
+ arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);  заполняет массив значениями из строки
+    if (i < seriesNew.Length-1){
+ arrayOfNumbers = arrayOfNumbers.Concat(new int[] {0}). ToArray();  добавляет новый нулевой элемент в конец массива
+    }
+    j++;
+  }
+ возвращаем arrayOfNumbers;
+}
+
+ функция вывода массива на печать 
+void PrintArry(int[] coll){
+ int count = coll. Длина;
+ индекс int = 0;
+  Console.Write("[");
+  while(index < count){
+    Console.Write(coll[index]);
+ индекс++;
+ if (индекс < количество){
+      Console.Write(", ");
+    }
+  }
+  Console.Write("]");
+} 
+
+
+string seriesNew = RemoveingSpaces(seriesOfNumbers);
+
+int[] arrayOfNumbers =  ArrayOfNumbers(seriesNew);
+
+PrintArry(arrayOfNumbers);

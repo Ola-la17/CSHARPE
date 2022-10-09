@@ -1,42 +1,26 @@
-Задача 27: 
-Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+ Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 452 -> 11
 82 -> 10
 9012 -> 12
 
 
-int number = ReadInt("Введите число: ");
-int len = NumberLen(number);
-SumNumbers(number, len);
+Console.WriteLine($"\nЗадача 27. Выдаёт сумму цифр в числе");
+Console.Write("Введите число N: ");
+int numberN = Convert.ToInt32(Console.ReadLine());
 
+  int SumNumber(int numberN){
+    
+ int counter = Convert.ToString(numberN). Длина;
+ int аванс = 0;
+ int результат = 0;
 
-// Функция ввода
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-// Функция подсчета цифр в числе
-int NumberLen(int a)
-{
-    int index = 0;
-    while (a > 0)
-    {
-        a /= 10;
-        index++;
+ for (int i = 0; i < счетчик; i++){
+ аванс = числоN - числоN % 10;
+ результат = результат + (числоN - аванс);
+ числоN = числоN / 10;
     }
-    return index;
-}
+ обратный результат;
+  }
 
-// Функция вывода суммы цифр в числе
-void SumNumbers(int n, int len)
-{
-    int sum = 0;
-    for (int i = 1; i <= len; i++)
-    {
-        sum += n % 10;
-        n /= 10;
-    }
-    Console.WriteLine(sum);
-}
+int sumNumber = SumNumber(numberN);
+Console.WriteLine("Сумма цифр в числе: " + sumNumber);

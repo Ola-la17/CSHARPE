@@ -1,0 +1,57 @@
+Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+Например, задан массив:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+Console.WriteLine("введите количество строк");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите количество столбцов");
+int m = Convert.ToInt32(Console.ReadLine());
+
+int[,] числа = новый int[n, m];
+FillArrayRandomNumbers(numbers);
+
+
+для (int j = 0; j < чисел. GetLength(1); j++)
+{
+ двойное среднее значение = 0;
+ для (int i = 0; i < чисел. GetLength(0); i++)
+    {
+ avarage = (средний + числа[i, j]);
+    }
+    avarage = avarage / n;
+    Console.Write(avarage + "; ");
+}
+Console.WriteLine();
+ПечатьРаспечатка (числа);
+
+
+
+void FillArrayRandomNumbers(массив int[,] )
+{
+ для массива (int i = 0; i <. GetLength(0); i++)
+    {
+ для массива (int j = 0; j <. GetLength(1); j++)
+        {
+ array[i, j] = новый Random(). Следующий(0, 10);
+        }
+    }
+}
+
+void Массив PrintArray(int[,] )
+{
+
+ для массива (int i = 0; i <. GetLength(0); i++)
+    {
+        Console.Write("[ ");
+ для массива (int j = 0; j <. GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.Write("]");
+        Console.WriteLine("");
+    }
+}
